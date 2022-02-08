@@ -1,0 +1,17 @@
+Program creates res folder where the solution dumps are stored as an 2D array. Name of the dump is it's iteration.
+To simulate the Ising model on a square lattice first create instance of the Solver class:
+
+ Solver($grid size$, $spin-spin interaction parameter J$, $spin-field parameter H$, $temperature$);
+
+ Boltzmann constant assumed as 1
+ Then start solver passing number of iterations to compute:
+
+ Solver::solve($number of iterations$);
+
+ To compute temperature sweep use this:
+
+ solver.temperatureSweep($TMin$, $TMax$, $Number of points$, $Number of iterations per point$, $Whether to use log scale$);
+
+ If $Whether to use log scale$ equals true, temperature sweep will be computed in log scale as 10^T.
+ Sweep os exported to the temperatureSweep file in format
+ $Temperature$ $Mean energy per spin$ $Mean spin$ $Mean magnetic susceptibility$

@@ -4,6 +4,7 @@
 
 int main()
 {
+    system("mkdir res");
     system("rm res/*");
 
     Solver solver(50, 1, 0.01, 0.0001);

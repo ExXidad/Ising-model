@@ -198,7 +198,7 @@ Solver::temperatureSweep(const double &TMin, const double &TMax, const int &nop,
             urd(gen) <= acceptProbability ? void() : flip(j, i);
         }
 
-        file << T << "\t" << meps / double(separator + 1) << "\t" << ms / double(separator + 1) << "\t"
+        file << (exp ? pow(10., T) : T) << "\t" << meps / double(separator + 1) << "\t" << ms / double(separator + 1) << "\t"
              << mms / H / double(separator + 1) << std::endl;
         std::cout << TMin << ":" << T << ":" << TMax << " through " << dT << std::endl;
         counter = 0;
